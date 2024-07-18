@@ -58,21 +58,24 @@ return {
     }
 
     local on_attach = function(_, bufnr)
-            vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { noremap = false })
+      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { noremap = false })
 
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap = false })
-            vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { noremap = false })
-            vim.keymap.set('n', 'gI', vim.lsp.buf.implementation, { noremap = false })
-            vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, { noremap = false })
-            vim.keymap.set('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols, { noremap = false })
-            vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, { noremap = false })
+      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap = false })
+      vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { noremap = false })
+      vim.keymap.set('n', 'gI', vim.lsp.buf.implementation, { noremap = false })
+      vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, { noremap = false })
+      vim.keymap.set('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols, { noremap = false })
+      vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, { noremap = false })
 
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = false })
-            vim.keymap.set('n', '<C-s>', vim.lsp.buf.signature_help, { noremap = false })
+      vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = false })
+      vim.keymap.set('n', '<C-s>', vim.lsp.buf.signature_help, { noremap = false })
 
-            vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-                    vim.lsp.buf.format()
-            end, { desc = 'Format current buffer with LSP' })
+      vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+        vim.lsp.buf.format()
+      end, { desc = 'Format current buffer with LSP' })
+
+      vim.api.nvim_command(
+        'autocmd BufWritePre *.go,*.tf,*.js,*.tsx,*.ts,*.md,*.css,*.scss,*.sass,*.yaml,*.yml,*.json,*.html,*.lua,*.templ :Format')
     end
 
     mason_lspconfig.setup_handlers {
