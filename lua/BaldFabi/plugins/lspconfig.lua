@@ -75,7 +75,7 @@ return {
       end, { desc = 'Format current buffer with LSP' })
 
       vim.api.nvim_command(
-        'autocmd BufWritePre *.go,*.tf,*.js,*.tsx,*.ts,*.md,*.css,*.scss,*.sass,*.yaml,*.yml,*.json,*.html,*.lua,*.templ :Format')
+        'autocmd BufWritePre *.go,*.tf,*.js,*.tsx,*.ts,*.md,*.css,*.scss,*.sass,*.yaml,*.yml,*.json,*.html,*.lua,*.templ,*.vue :Format')
     end
 
     mason_lspconfig.setup_handlers {
