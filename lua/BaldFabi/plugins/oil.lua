@@ -15,7 +15,7 @@ return {
                                 ["g#"] = { "actions.select", opts = { vertical = true }, desc = "Open the entry in a vertical split" },
                                 ["g-"] = { "actions.select", opts = { horizontal = true }, desc = "Open the entry in a horizontal split" },
                                 ["<C-t>"] = { "actions.select", opts = { tab = true }, desc = "Open the entry in new tab" },
-                                ["<C-p>"] = "actions.preview",
+                                ["gp"] = "actions.preview",
                                 ["<C-c>"] = "actions.close",
                                 ["<C-l>"] = "actions.refresh",
                                 ["-"] = "actions.parent",
