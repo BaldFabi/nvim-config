@@ -15,7 +15,7 @@ return {
       gopls = {},
       pyright = {},
       rust_analyzer = {},
-      ts_ls = {},
+      tsserver = {},
       marksman = {},
       terraformls = {},
       tailwindcss = {
