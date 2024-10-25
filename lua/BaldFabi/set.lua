@@ -24,7 +24,6 @@ vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
 vim.o.termguicolors = true
---vim.cmd [[colorscheme dracula]]
 
 vim.o.colorcolumn = '80'
 
