@@ -11,6 +11,7 @@ return {
   },
   config = function()
     local servers = {
+      volar = {},
       ansiblels = {},
       gopls = {},
       pyright = {},
