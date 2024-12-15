@@ -3,12 +3,12 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = false })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = false })
 
-vim.keymap.set('n', '<leader>s#', '<CMD>vsplit<CR>', { noremap = false })
-vim.keymap.set('n', '<leader>s-', '<CMD>split<CR>', { noremap = false })
-vim.keymap.set('n', '<leader>sx', '<CMD>close<CR>', { noremap = false })
 vim.keymap.set('n', '<leader>se', '<CMD>wincmd =<CR>', { noremap = false })
 vim.keymap.set('n', '+', '<CMD>vertical resize +10<CR>', { noremap = false })
 vim.keymap.set('n', '-', '<CMD>vertical resize -10<CR>', { noremap = false })
+
+vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>", { noremap = false })
+vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>", { noremap = false })
 
 vim.keymap.set('i', 'jk', '<ESC>', { noremap = false })
 

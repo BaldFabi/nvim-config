@@ -17,7 +17,7 @@ return {
                                 ["<C-t>"] = { "actions.select", opts = { tab = true }, desc = "Open the entry in new tab" },
                                 ["gp"] = "actions.preview",
                                 ["<C-c>"] = "actions.close",
-                                ["<C-l>"] = "actions.refresh",
+                                ["<C-a>"] = "actions.refresh",
                                 ["-"] = "actions.parent",
                                 ["_"] = "actions.open_cwd",
                                 ["`"] = "actions.cd",
