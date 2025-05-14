@@ -79,16 +79,17 @@ return {
         'autocmd BufWritePre *.go,*.tf,*.js,*.tsx,*.ts,*.md,*.css,*.scss,*.sass,*.yaml,*.yml,*.json,*.html,*.lua,*.templ,*.vue :Format')
     end
 
-    mason_lspconfig.setup_handlers {
-      function(server_name)
-        require('lspconfig')[server_name].setup {
-          capabilities = capabilities,
-          on_attach = on_attach,
-          settings = servers[server_name],
-          handlers = handlers,
-        }
-      end,
-    }
+    vim.lsp.config("*", {
+      on_attach = on_attach,
+      handlers = handlers,
+      capabilities = capabilities,
+    })
+
+    for _, lsp in ipairs(vim.tbl_keys(servers)) do
+      vim.lsp.config(lsp, {
+        settings = servers[lsp],
+      })
+    end
 
     local null_ls = require('null-ls')
     null_ls.setup({
