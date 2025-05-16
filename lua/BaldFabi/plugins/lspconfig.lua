@@ -79,14 +79,11 @@ return {
         'autocmd BufWritePre *.go,*.tf,*.js,*.tsx,*.ts,*.md,*.css,*.scss,*.sass,*.yaml,*.yml,*.json,*.html,*.lua,*.templ,*.vue :Format')
     end
 
-    vim.lsp.config("*", {
-      on_attach = on_attach,
-      handlers = handlers,
-      capabilities = capabilities,
-    })
-
     for _, lsp in ipairs(vim.tbl_keys(servers)) do
       vim.lsp.config(lsp, {
+        on_attach = on_attach,
+        handlers = handlers,
+        capabilities = capabilities,
         settings = servers[lsp],
       })
     end

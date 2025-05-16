@@ -7,7 +7,7 @@ return {
         },
         config = function()
                 require("mason-null-ls").setup({
-                        ensure_installed = { "goimports" }
+                        ensure_installed = { "goimports", "prettier" }
                 })
         end,
 }
