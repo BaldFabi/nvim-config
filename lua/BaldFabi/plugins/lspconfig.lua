@@ -11,7 +11,8 @@ return {
   },
   config = function()
     local servers = {
-      volar = {},
+      vue_ls = {},
+      html = {},
       ansiblels = {},
       gopls = {},
       pyright = {},
