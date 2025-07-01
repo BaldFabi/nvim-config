@@ -77,7 +77,7 @@ return {
       end, { desc = 'Format current buffer with LSP' })
 
       vim.api.nvim_command(
-        'autocmd BufWritePre *.go,*.tf,*.js,*.tsx,*.ts,*.md,*.css,*.scss,*.sass,*.yaml,*.yml,*.json,*.html,*.lua,*.templ,*.vue :Format')
+        'autocmd BufWritePre *.go,*.tf,*.js,*.tsx,*.ts,*.md,*.css,*.scss,*.sass,*.yaml,*.yml,*.json,*.html,*.lua,*.templ,*.vue,*.graphql :Format')
     end
 
     for _, lsp in ipairs(vim.tbl_keys(servers)) do
@@ -91,6 +91,7 @@ return {
 
     local null_ls = require('null-ls')
     null_ls.setup({
+      on_attach = on_attach,
       sources = {
         null_ls.builtins.formatting.goimports,
         null_ls.builtins.formatting.prettier,
