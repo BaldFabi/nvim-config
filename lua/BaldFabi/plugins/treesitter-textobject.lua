@@ -1,4 +1,5 @@
 return {
         "nvim-treesitter/nvim-treesitter-textobjects",
-        after = "nvim-treesitter"
+        after = "nvim-treesitter",
+        branch = "main"
 }
