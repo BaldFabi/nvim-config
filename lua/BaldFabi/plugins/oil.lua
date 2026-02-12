@@ -29,6 +29,6 @@ return {
                         },
                         use_default_keymaps = false
                 })
-                vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { noremap = false })
+                vim.keymap.set("n", "<leader>l", "<CMD>Oil<CR>", { noremap = false })
         end
 }
