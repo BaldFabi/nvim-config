@@ -34,7 +34,7 @@ return {
                         { desc = "Scroll opencode down" })
 
                 vim.g.opencode_opts = {
-                        provider = {
+                        server = {
                                 enabled = "tmux",
                                 tmux = {
                                         -- ...
