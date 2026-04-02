@@ -19,5 +19,4 @@ vim.keymap.set('n', '<C-n>', '<CMD>bnext<CR>', { noremap = false })
 vim.keymap.set('n', '<C-p>', '<CMD>bprevious<CR>', { noremap = false })
 vim.keymap.set('n', '<leader>bx', '<CMD>bd<CR>', { noremap = false })
 
-vim.keymap.set('n', '<leader>rr', '<CMD>LspRestart<CR>', { noremap = false })
 vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = false })
