@@ -86,6 +86,8 @@ return {
 			vim.api.nvim_command(
 				"autocmd BufWritePre *.go,*.tf,*.js,*.tsx,*.ts,*.md,*.css,*.scss,*.sass,*.yaml,*.yml,*.json,*.html,*.lua,*.templ,*.vue,*.graphql :Format"
 			)
+
+			vim.treesitter.start()
 		end
 
 		for _, lsp in ipairs(vim.tbl_keys(servers)) do
