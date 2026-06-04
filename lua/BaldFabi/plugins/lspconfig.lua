@@ -55,8 +55,6 @@ return {
 		})
 
 		local handlers = {
-			--["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" }),
-			--["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" }),
 			["textDocument/hover"] = vim.lsp.buf.hover({ border = "single" }),
 			["textDocument/signatureHelp"] = vim.lsp.buf.signature_help({ border = "single" }),
 		}
@@ -77,7 +75,6 @@ return {
 			)
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = false })
-			vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help, { noremap = false })
 
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				callback = function() vim.lsp.buf.format() end,

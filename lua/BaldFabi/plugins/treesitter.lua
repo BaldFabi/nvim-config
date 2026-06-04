@@ -32,7 +32,8 @@ return {
             'scss',
             'sql',
             'toml',
-            'vim'
+            'vim',
+            'templ'
         }
     end
 }
