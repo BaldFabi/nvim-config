@@ -7,7 +7,7 @@ return {
 	},
 	config = function()
 		require("mason-null-ls").setup({
-			ensure_installed = { "goimports", "prettier", "tree-sitter-cli" },
+			ensure_installed = { "goimports", "prettier", "tree-sitter-cli", "pg_format" },
 		})
 	end,
 }
