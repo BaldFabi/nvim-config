@@ -39,6 +39,7 @@ return {
 				},
 			},
 			templ = {},
+			bashls = {},
 		}
 
 		require("neodev").setup()
