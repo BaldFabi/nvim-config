@@ -18,5 +18,10 @@ return {
                                 }
                         }
                 }
+
+                for i = 1, 9 do
+                        vim.keymap.set('n', '<leader>g' .. i, '<CMD>BufferLineGoToBuffer ' .. i .. '<CR>',
+                                { noremap = false })
+                end
         end
 }
