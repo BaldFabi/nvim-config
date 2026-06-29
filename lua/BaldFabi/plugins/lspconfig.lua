@@ -60,7 +60,7 @@ return {
 			["textDocument/signatureHelp"] = vim.lsp.buf.signature_help({ border = "single" }),
 		}
 
-		local on_attach = function(_, bufnr)
+		local on_attach = function(_, _)
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { noremap = false })
 
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = false })
