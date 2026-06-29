@@ -7,7 +7,7 @@ return {
 
 		"j-hui/fidget.nvim",
 
-		"folke/neodev.nvim",
+		"folke/lazydev.nvim",
 	},
 	config = function()
 		local servers = {
@@ -42,7 +42,7 @@ return {
 			bashls = {},
 		}
 
-		require("neodev").setup()
+		require("lazydev").setup()
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
