@@ -37,3 +37,6 @@ vim.api.nvim_create_autocmd("FileType", {
                 vim.opt_local.linebreak = true
         end,
 })
+
+vim.o.winborder = "rounded"
+
