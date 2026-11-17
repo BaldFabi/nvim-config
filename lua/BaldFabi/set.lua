@@ -40,3 +40,4 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.o.winborder = "rounded"
 
+vim.o.autoread = true
